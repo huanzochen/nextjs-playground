@@ -1,11 +1,11 @@
-import Layout from '../../components/layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
-import Head from 'next/head'
+import Layout from "../../components/layout";
+import { getAllPostIds, getPostData } from "../../lib/posts";
+import Head from "next/head";
 // Add this import
-import Date from '../../components/date';
+import Date from "../../components/date";
 
 // Add this import at the top of the file
-import utilStyles from '../../styles/utils.module.scss';
+import utilStyles from "../../styles/utils.module.scss";
 
 export default function Post({ postData }) {
   return (
@@ -24,10 +24,8 @@ export default function Post({ postData }) {
   );
 }
 
-
 export async function getStaticPaths() {
   const paths = getAllPostIds();
-  console.log('paths:',paths)
   return {
     paths,
     fallback: false,
